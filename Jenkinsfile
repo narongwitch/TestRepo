@@ -6,5 +6,10 @@ pipeline {
         echo 'Starting jenk'
       }
     }
+    stage('build') {
+      steps {
+        build 'build TestRepo'
+      }
+    }
   }
 }
