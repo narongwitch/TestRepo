@@ -8,7 +8,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        build 'build TestRepo'
+        build(job: 'build TestRepo', propagate: true, quietPeriod: -1)
       }
     }
   }
